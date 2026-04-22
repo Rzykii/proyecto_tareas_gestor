@@ -1,0 +1,91 @@
+
+@media (max-width: 1100px) {
+
+    .app-wrapper {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .board {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    /* La columna "Completadas" ocupa el ancho completo en la segunda fila */
+    #completadas {
+        grid-column: 1 / -1;
+    }
+}
+
+/*Tablet portrait (≤ 768px) */
+@media (max-width: 768px) {
+
+    /* Todo en una sola columna */
+    .app-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /* El panel del formulario deja de ser sticky y pierde el borde lateral */
+    .form-panel {
+        position: static;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    /* El tablero vuelve a una columna */
+    .board {
+        grid-template-columns: 1fr;
+        padding-top: 1.25rem;
+    }
+
+    /* "Completadas" vuelve a ocupar solo su celda */
+    #completadas {
+        grid-column: auto;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.4rem, 5vw, 2rem);
+    }
+}
+
+/*Mobile (≤ 480px) */
+@media (max-width: 480px) {
+
+    header {
+        height: 52px;
+    }
+
+    header nav img {
+        height: 28px;
+    }
+
+    .hero {
+        padding: 1.5rem 1rem;
+    }
+
+    .form-panel {
+        padding: 1.25rem 1rem;
+    }
+
+    .board {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .btn-primary {
+        font-size: .85rem;
+        padding: .8rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+/* Retina / High-DPI */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+    .tarea-card {
+        border-width: 0.5px;
+    }
+}
