@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="/assets/img/logo_TEC_UCT_BLANCO1.png" alt="uct">
+        </nav>
+    </header>
+    <h1>Gestor de Tareas UCT</h1>
+    <p>Gestor de tareas básico y sencillo que permite agregar tareas y asignarles una prioridad.</p>
+    <form id="gestortareas">
+    <main>
+    <label for="descripcion">Descripción Tarea:</label><br><br>  
+    <textarea id="descripcion" required></textarea><br><br>  
+    <label for="prioridad">Prioridad:</label><br><br>  
+    <select id="prioridad" required>  
+        <option value="">Seleccionar</option>  
+        <option value="alta">Alta</option>  
+        <option value="media">Media</option>  
+        <option value="baja">Baja</option>  
+    </select><br><br>  
+    <label for="fecha">Fecha límite:</label><br><br>  
+    <input type="date" id="fecha" required><br><br><br>  
+ 
+    <button id="btn-agregar" onclick="agregarTarea()" type="submit">Agregar Tarea</button>
+    </main><br>
+    
+    <aside class="columna" id="pendientes">  
+    <h3>Pendientes <span class="contador">0</span></h3>  
+    <div class="tareas-container"></div>
+    <button id="btn-pendiente" type="submit">eliminar tarea</button>  
+    </aside><br>
+
+    <aside class="columna" id="en-progreso">  
+    <h3>En Progreso <span class="contador">0</span></h3>  
+    <div class="tareas-container"></div>
+    <button id="btn-progreso" type="submit">eliminar tarea</button>  
+    </aside><br>  
+ 
+    <aside class="columna" id="completadas">  
+    <h3>Completadas <span class="contador">0</span></h3>  
+    <div class="tareas-container"></div>
+    <button id="btn-completadas" type="submit">eliminar tarea</button>  
+    </aside>
+    </form>  
+    <footer>Sebastián Muñoz. <br> 
+        Información de contacto - Correo: smunoz2025@alu.uct.cl
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+
+</body>
+</html>
